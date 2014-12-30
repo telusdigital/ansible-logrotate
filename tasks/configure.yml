@@ -1,0 +1,12 @@
+---
+- name: "Upload Config | {{ logrotate_name }} " 
+  template:
+    src: etc/logrotate.d/template
+    dest: "/etc/logrotate.d/{{ logrotate_name }}"
+    owner: root
+    group: wcadmin
+    mode: 0664
+  tags:
+    - configuration
+    - template-configuration
+    - logrotate
