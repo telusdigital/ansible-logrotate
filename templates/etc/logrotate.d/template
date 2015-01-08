@@ -8,7 +8,7 @@
         {% if logrotate_postpone_compression %}delaycompress{% else %}nodelaycompress{% endif %}
         {% if logrotate_ignore_empty_logs %}notifempty{% endif %}
 
-        create {{ logrotate_create_logs_with_mode }} {{ logrotate_create_logs_with_owner }}
+        create {{ logrotate_create_logs_with_mode }} {{ logrotate_create_logs_with_owner }} {{ logrotate_create_logs_with_group }}
 {% if logrotate_prerotate_commands %}
         prerotate
 {%   for command in logrotate_prerotate_commands %}
