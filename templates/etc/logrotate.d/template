@@ -1,7 +1,6 @@
 # {{ ansible_managed }}
 
 {{ logrotate_log_path }}/*.log {
-        su {{ logrotate_create_logs_with_owner }}
         {{ logrotate_frequency }}
         rotate {{ logrotate_retention_limit }} 
         {% if logrotate_ignore_missing_logs %}missingok{% endif %}
