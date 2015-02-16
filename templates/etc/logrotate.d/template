@@ -4,6 +4,7 @@
         {{ logrotate_frequency }}
         rotate {{ logrotate_retention_limit }} 
         {% if logrotate_ignore_missing_logs %}missingok{% endif %}
+        {% if logrotate_compression %}compress{% endif %}
         {% if logrotate_postpone_compression %}delaycompress{% else %}nodelaycompress{% endif %}
         {% if logrotate_ignore_empty_logs %}notifempty{% endif %}
 
