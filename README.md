@@ -3,6 +3,7 @@
 logrotate - rotates, compresses, and mails system logs
 
 [![Platforms](http://img.shields.io/badge/platforms-ubuntu-lightgrey.svg?style=flat)](#)
+[![Licence](https://img.shields.io/badge/Licence-MIT-blue.svg)](https://tldrlegal.com/license/mit-license)
 
 Tunables
 --------
@@ -32,10 +33,6 @@ Example Playbook
       roles:
          - role: telusdigital.logrotate
            logrotate_name: nginx
-
-License
--------
-[MIT](https://tldrlegal.com/license/mit-license)
 
 Contributors
 ------------
