@@ -1,5 +1,7 @@
+#jinja2: trim_blocks:False
 # {{ ansible_managed }}
 
+{%   for logrotate_log_path in logrotate_log_paths %}
 {{ logrotate_log_path }}/*.log {
         {{ logrotate_frequency }}
         rotate {{ logrotate_retention_limit }} 
@@ -25,3 +27,4 @@
         endscript
 {% endif %}
 }
+{%   endfor %}
