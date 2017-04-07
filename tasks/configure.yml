@@ -4,7 +4,7 @@
     src: etc/logrotate.d/template
     dest: "/etc/logrotate.d/{{ logrotate_name }}"
     owner: root
-    group: staff
+    group: "{{ logrotate_config_group }}"
     mode: 0644
   tags:
     - configuration
