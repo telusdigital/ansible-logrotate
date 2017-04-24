@@ -1,7 +1,7 @@
 ---
-- name: Install Packages | apt
-  apt:
+- name: Install Packages
+  package:
+    name: "{{ item }}"
     state: latest
-    pkg: "{{ item }}"
   with_items:
     - logrotate
